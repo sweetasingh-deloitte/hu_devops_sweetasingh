@@ -1,0 +1,771 @@
+vMicrosoft Windows [Version 10.0.19042.1706]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sweetasingh>cd Downloads
+
+C:\Users\sweetasingh\Downloads>ssh -i tera2sweeta.pem sweetapalsingh@20.81.40.39
+The authenticity of host '20.81.40.39 (20.81.40.39)' can't be established.
+ECDSA key fingerprint is SHA256:14XyDnFcjieJEmTuchJROBBAnRcC73/MjqDPLDLJIdI.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '20.81.40.39' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.13.0-1031-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Jun 29 04:27:38 UTC 2022
+
+  System load:  0.09              Processes:             121
+  Usage of /:   4.8% of 28.90GB   Users logged in:       0
+  Memory usage: 6%                IPv4 address for eth0: 10.19.0.4
+  Swap usage:   0%
+
+1 update can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+sweetapalsingh@hu-sweetapal:~$ sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+Hit:1 http://azure.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://azure.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:5 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:11 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1935 kB]
+Get:12 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [15.6 kB]
+Get:13 http://azure.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1119 kB]
+Get:14 http://azure.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [159 kB]
+Get:15 http://azure.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [592 B]
+Get:16 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [924 kB]
+Get:17 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [208 kB]
+Get:18 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.9 kB]
+Get:19 http://azure.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.4 kB]
+Get:20 http://azure.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7336 B]
+Get:21 http://azure.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [596 B]
+Get:22 http://azure.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [44.8 kB]
+Get:23 http://azure.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [11.3 kB]
+Get:24 http://azure.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [976 B]
+Get:25 http://azure.archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:26 http://azure.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [23.7 kB]
+Get:27 http://azure.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [15.9 kB]
+Get:28 http://azure.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+Get:29 http://azure.archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:30 http://azure.archive.ubuntu.com/ubuntu focal-security/main amd64 Packages [1583 kB]
+Get:31 http://azure.archive.ubuntu.com/ubuntu focal-security/main Translation-en [268 kB]
+Get:32 http://azure.archive.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [10.6 kB]
+Get:33 http://azure.archive.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1042 kB]
+Get:34 http://azure.archive.ubuntu.com/ubuntu focal-security/restricted Translation-en [148 kB]
+Get:35 http://azure.archive.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [572 B]
+Get:36 http://azure.archive.ubuntu.com/ubuntu focal-security/universe amd64 Packages [708 kB]
+Get:37 http://azure.archive.ubuntu.com/ubuntu focal-security/universe Translation-en [127 kB]
+Get:38 http://azure.archive.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [14.6 kB]
+Get:39 http://azure.archive.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+Get:40 http://azure.archive.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5376 B]
+Get:41 http://azure.archive.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [512 B]
+Fetched 23.1 MB in 3s (6811 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+gnupg is already the newest version (2.2.19-3ubuntu2.1).
+gnupg set to manually installed.
+software-properties-common is already the newest version (0.99.9.8).
+software-properties-common set to manually installed.
+The following additional packages will be installed:
+  libcurl4
+The following packages will be upgraded:
+  curl libcurl4
+2 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+Need to get 396 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.12 [161 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.12 [235 kB]
+Fetched 396 kB in 0s (3639 kB/s)
+(Reading database ... 57951 files and directories currently installed.)
+Preparing to unpack .../curl_7.68.0-1ubuntu2.12_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.12) over (7.68.0-1ubuntu2.11) ...
+Preparing to unpack .../libcurl4_7.68.0-1ubuntu2.12_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.12) over (7.68.0-1ubuntu2.11) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.12) ...
+Setting up curl (7.68.0-1ubuntu2.12) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+sweetapalsingh@hu-sweetapal:~$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+OK
+sweetapalsingh@hu-sweetapal:~$ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+Hit:1 http://azure.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://azure.archive.ubuntu.com/ubuntu focal-security InRelease
+Get:5 https://apt.releases.hashicorp.com focal InRelease [16.3 kB]
+Get:6 https://apt.releases.hashicorp.com focal/main amd64 Packages [58.3 kB]
+Fetched 74.5 kB in 1s (133 kB/s)
+Reading package lists... Done
+sweetapalsingh@hu-sweetapal:~$ sudo apt-get update && sudo apt-get install terraform
+Hit:1 http://azure.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://azure.archive.ubuntu.com/ubuntu focal-security InRelease
+Hit:5 https://apt.releases.hashicorp.com focal InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  terraform
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 19.9 MB of archives.
+After this operation, 62.9 MB of additional disk space will be used.
+Get:1 https://apt.releases.hashicorp.com focal/main amd64 terraform amd64 1.2.3 [19.9 MB]
+Fetched 19.9 MB in 0s (92.9 MB/s)
+Selecting previously unselected package terraform.
+(Reading database ... 57951 files and directories currently installed.)
+Preparing to unpack .../terraform_1.2.3_amd64.deb ...
+Unpacking terraform (1.2.3) ...
+Setting up terraform (1.2.3) ...
+sweetapalsingh@hu-sweetapal:~$ terraform -help
+Usage: terraform [global options] <subcommand> [args]
+
+The available commands for execution are listed below.
+The primary workflow commands are given first, followed by
+less common or more advanced commands.
+
+Main commands:
+  init          Prepare your working directory for other commands
+  validate      Check whether the configuration is valid
+  plan          Show changes required by the current configuration
+  apply         Create or update infrastructure
+  destroy       Destroy previously-created infrastructure
+
+All other commands:
+  console       Try Terraform expressions at an interactive command prompt
+  fmt           Reformat your configuration in the standard style
+  force-unlock  Release a stuck lock on the current workspace
+  get           Install or upgrade remote Terraform modules
+  graph         Generate a Graphviz graph of the steps in an operation
+  import        Associate existing infrastructure with a Terraform resource
+  login         Obtain and save credentials for a remote host
+  logout        Remove locally-stored credentials for a remote host
+  output        Show output values from your root module
+  providers     Show the providers required for this configuration
+  refresh       Update the state to match remote systems
+  show          Show the current state or a saved plan
+  state         Advanced state management
+  taint         Mark a resource instance as not fully functional
+  test          Experimental support for module integration testing
+  untaint       Remove the 'tainted' state from a resource instance
+  version       Show the current Terraform version
+  workspace     Workspace management
+
+Global options (use these before the subcommand, if any):
+  -chdir=DIR    Switch to a different working directory before executing the
+                given subcommand.
+  -help         Show this help output, or the help for a specified subcommand.
+  -version      An alias for the "version" subcommand.
+sweetapalsingh@hu-sweetapal:~$ sudo apt install azure-cli
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  javascript-common libjs-jquery libjs-sphinxdoc libjs-underscore python-pkginfo-doc python3-adal python3-aiohttp python3-applicationinsights python3-argcomplete
+  python3-async-timeout python3-azext-devops python3-azure python3-azure-cli python3-azure-cli-core python3-azure-cli-telemetry python3-azure-cosmos
+  python3-azure-cosmosdb-table python3-azure-datalake-store python3-azure-functions-devops-build python3-azure-multiapi-storage python3-azure-storage python3-bcrypt
+  python3-cffi python3-dateutil python3-fabric python3-humanfriendly python3-invoke python3-isodate python3-javaproperties python3-jmespath python3-jsmin python3-jsondiff
+  python3-knack python3-mock python3-msal python3-msal-extensions python3-msrest python3-msrestazure python3-multidict python3-paramiko python3-pbr python3-pkginfo
+  python3-ply python3-portalocker python3-psutil python3-pycparser python3-pygments python3-requests-oauthlib python3-scp python3-sshtunnel python3-tabulate python3-tz
+  python3-uamqp python3-vsts-cd-manager python3-websocket python3-wheel python3-xmltodict python3-yarl
+Suggested packages:
+  apache2 | lighttpd | httpd python-azure-doc python3-dev python-invoke-doc python-mock-doc python3-gssapi python-ply-doc python-psutil-doc cpp python-pygments-doc
+  ttf-bitstream-vera
+The following NEW packages will be installed:
+  azure-cli javascript-common libjs-jquery libjs-sphinxdoc libjs-underscore python-pkginfo-doc python3-adal python3-aiohttp python3-applicationinsights
+  python3-argcomplete python3-async-timeout python3-azext-devops python3-azure python3-azure-cli python3-azure-cli-core python3-azure-cli-telemetry python3-azure-cosmos
+  python3-azure-cosmosdb-table python3-azure-datalake-store python3-azure-functions-devops-build python3-azure-multiapi-storage python3-azure-storage python3-bcrypt
+  python3-cffi python3-dateutil python3-fabric python3-humanfriendly python3-invoke python3-isodate python3-javaproperties python3-jmespath python3-jsmin python3-jsondiff
+  python3-knack python3-mock python3-msal python3-msal-extensions python3-msrest python3-msrestazure python3-multidict python3-paramiko python3-pbr python3-pkginfo
+  python3-ply python3-portalocker python3-psutil python3-pycparser python3-pygments python3-requests-oauthlib python3-scp python3-sshtunnel python3-tabulate python3-tz
+  python3-uamqp python3-vsts-cd-manager python3-websocket python3-wheel python3-xmltodict python3-yarl
+0 upgraded, 59 newly installed, 0 to remove and 3 not upgraded.
+Need to get 8941 kB of archives.
+After this operation, 198 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-isodate all 0.6.0-2 [24.0 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-requests-oauthlib all 1.0.0-1.1build1 [16.8 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-msrest all 0.6.10-1 [45.8 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 python3-dateutil all 2.7.3-3ubuntu1 [63.3 kB]
+Get:5 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-adal all 1.2.2-1 [32.3 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-msrestazure all 0.6.2-1 [26.4 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-multidict amd64 4.7.3-1build1 [37.1 kB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-yarl amd64 1.4.2-2 [51.8 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-async-timeout all 3.0.1-1 [5604 B]
+Get:10 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-aiohttp amd64 3.6.2-1ubuntu1 [274 kB]
+Get:11 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-azure-cosmosdb-table all 1.0.5+git20191025-5 [61.0 kB]
+Get:12 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-ply all 3.11-3ubuntu0.1 [46.3 kB]
+Get:13 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 python3-pycparser all 2.19-1ubuntu1 [71.0 kB]
+Get:14 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 python3-cffi all 1.14.0-1build1 [70.3 kB]
+Get:15 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-azure-datalake-store all 0.0.48-3 [40.7 kB]
+Get:16 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-azure-storage all 20181109+git-2 [88.7 kB]
+Get:17 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-msal all 1.1.0-3 [38.9 kB]
+Get:18 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-portalocker all 1.5.1-1 [11.0 kB]
+Get:19 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-msal-extensions all 0.1.3-2 [8260 B]
+Get:20 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-uamqp amd64 1.2.6-4 [653 kB]
+Get:21 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-azure all 20200130+git-2 [3594 kB]
+Get:22 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-argcomplete all 1.8.1-1.3ubuntu1 [27.2 kB]
+Get:23 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-applicationinsights all 0.11.9-2 [31.7 kB]
+Get:24 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-azure-cli-telemetry all 2.0.81+ds-4ubuntu0.2 [10.1 kB]
+Get:25 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-humanfriendly all 4.18-2 [60.8 kB]
+Get:26 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-jmespath all 0.9.4-2ubuntu1 [21.5 kB]
+Get:27 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-pygments all 2.3.1+dfsg-1ubuntu2.2 [579 kB]
+Get:28 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 python3-tabulate all 0.8.6-0ubuntu2 [31.7 kB]
+Get:29 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-knack all 0.6.3-2 [37.8 kB]
+Get:30 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 python3-bcrypt amd64 3.1.7-2ubuntu1 [30.4 kB]
+Get:31 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-paramiko all 2.6.0-2ubuntu0.1 [122 kB]
+Get:32 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-pkginfo all 1.4.2-3 [13.5 kB]
+Get:33 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-wheel all 0.34.2-1 [23.8 kB]
+Get:34 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-azure-cli-core all 2.0.81+ds-4ubuntu0.2 [91.5 kB]
+Get:35 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-azure-cosmos all 3.1.1-3 [52.1 kB]
+Get:36 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-azure-functions-devops-build all 0.0.22-4 [22.4 kB]
+Get:37 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-azure-multiapi-storage all 0.2.4-3 [143 kB]
+Get:38 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-invoke all 1.3.0+ds-0.1 [88.9 kB]
+Get:39 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-fabric all 2.5.0-0.2 [41.7 kB]
+Get:40 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-javaproperties all 0.6.0-2 [16.0 kB]
+Get:41 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-jsmin all 2.2.2-2 [12.5 kB]
+Get:42 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-jsondiff all 1.1.1-4 [7200 B]
+Get:43 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 python3-pbr all 5.4.5-0ubuntu1 [64.0 kB]
+Get:44 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-mock all 3.0.5-1build1 [25.6 kB]
+Get:45 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 python3-psutil amd64 5.5.1-1ubuntu4 [141 kB]
+Get:46 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-scp all 0.13.0-2 [9552 B]
+Get:47 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-sshtunnel all 0.1.4-2 [22.8 kB]
+Get:48 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 python3-tz all 2019.3-1 [24.4 kB]
+Get:49 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-vsts-cd-manager all 1.0.2-2 [13.2 kB]
+Get:50 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-websocket all 0.53.0-2ubuntu1 [32.3 kB]
+Get:51 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-xmltodict all 0.12.0-1 [12.6 kB]
+Get:52 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3-azure-cli all 2.0.81+ds-4ubuntu0.2 [848 kB]
+Get:53 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 azure-cli all 2.0.81+ds-4ubuntu0.2 [2824 B]
+Get:54 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 javascript-common all 11 [6066 B]
+Get:55 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 libjs-jquery all 3.3.1~dfsg-3 [329 kB]
+Get:56 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 libjs-underscore all 1.9.1~dfsg-1ubuntu0.20.04.1 [99.5 kB]
+Get:57 http://azure.archive.ubuntu.com/ubuntu focal/main amd64 libjs-sphinxdoc all 1.8.5-7ubuntu3 [97.1 kB]
+Get:58 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python-pkginfo-doc all 1.4.2-3 [20.6 kB]
+Get:59 http://azure.archive.ubuntu.com/ubuntu focal/universe amd64 python3-azext-devops all 0.17.0-5 [466 kB]
+Fetched 8941 kB in 3s (2860 kB/s)
+Extracting templates from packages: 100%
+Selecting previously unselected package python3-isodate.
+(Reading database ... 57954 files and directories currently installed.)
+Preparing to unpack .../00-python3-isodate_0.6.0-2_all.deb ...
+Unpacking python3-isodate (0.6.0-2) ...
+Selecting previously unselected package python3-requests-oauthlib.
+Preparing to unpack .../01-python3-requests-oauthlib_1.0.0-1.1build1_all.deb ...
+Unpacking python3-requests-oauthlib (1.0.0-1.1build1) ...
+Selecting previously unselected package python3-msrest.
+Preparing to unpack .../02-python3-msrest_0.6.10-1_all.deb ...
+Unpacking python3-msrest (0.6.10-1) ...
+Selecting previously unselected package python3-dateutil.
+Preparing to unpack .../03-python3-dateutil_2.7.3-3ubuntu1_all.deb ...
+Unpacking python3-dateutil (2.7.3-3ubuntu1) ...
+Selecting previously unselected package python3-adal.
+Preparing to unpack .../04-python3-adal_1.2.2-1_all.deb ...
+Unpacking python3-adal (1.2.2-1) ...
+Selecting previously unselected package python3-msrestazure.
+Preparing to unpack .../05-python3-msrestazure_0.6.2-1_all.deb ...
+Unpacking python3-msrestazure (0.6.2-1) ...
+Selecting previously unselected package python3-multidict.
+Preparing to unpack .../06-python3-multidict_4.7.3-1build1_amd64.deb ...
+Unpacking python3-multidict (4.7.3-1build1) ...
+Selecting previously unselected package python3-yarl.
+Preparing to unpack .../07-python3-yarl_1.4.2-2_amd64.deb ...
+Unpacking python3-yarl (1.4.2-2) ...
+Selecting previously unselected package python3-async-timeout.
+Preparing to unpack .../08-python3-async-timeout_3.0.1-1_all.deb ...
+Unpacking python3-async-timeout (3.0.1-1) ...
+Selecting previously unselected package python3-aiohttp.
+Preparing to unpack .../09-python3-aiohttp_3.6.2-1ubuntu1_amd64.deb ...
+Unpacking python3-aiohttp (3.6.2-1ubuntu1) ...
+Selecting previously unselected package python3-azure-cosmosdb-table.
+Preparing to unpack .../10-python3-azure-cosmosdb-table_1.0.5+git20191025-5_all.deb ...
+Unpacking python3-azure-cosmosdb-table (1.0.5+git20191025-5) ...
+Selecting previously unselected package python3-ply.
+Preparing to unpack .../11-python3-ply_3.11-3ubuntu0.1_all.deb ...
+Unpacking python3-ply (3.11-3ubuntu0.1) ...
+Selecting previously unselected package python3-pycparser.
+Preparing to unpack .../12-python3-pycparser_2.19-1ubuntu1_all.deb ...
+Unpacking python3-pycparser (2.19-1ubuntu1) ...
+Selecting previously unselected package python3-cffi.
+Preparing to unpack .../13-python3-cffi_1.14.0-1build1_all.deb ...
+Unpacking python3-cffi (1.14.0-1build1) ...
+Selecting previously unselected package python3-azure-datalake-store.
+Preparing to unpack .../14-python3-azure-datalake-store_0.0.48-3_all.deb ...
+Unpacking python3-azure-datalake-store (0.0.48-3) ...
+Selecting previously unselected package python3-azure-storage.
+Preparing to unpack .../15-python3-azure-storage_20181109+git-2_all.deb ...
+Unpacking python3-azure-storage (20181109+git-2) ...
+Selecting previously unselected package python3-msal.
+Preparing to unpack .../16-python3-msal_1.1.0-3_all.deb ...
+Unpacking python3-msal (1.1.0-3) ...
+Selecting previously unselected package python3-portalocker.
+Preparing to unpack .../17-python3-portalocker_1.5.1-1_all.deb ...
+Unpacking python3-portalocker (1.5.1-1) ...
+Selecting previously unselected package python3-msal-extensions.
+Preparing to unpack .../18-python3-msal-extensions_0.1.3-2_all.deb ...
+Unpacking python3-msal-extensions (0.1.3-2) ...
+Selecting previously unselected package python3-uamqp.
+Preparing to unpack .../19-python3-uamqp_1.2.6-4_amd64.deb ...
+Unpacking python3-uamqp (1.2.6-4) ...
+Selecting previously unselected package python3-azure.
+Preparing to unpack .../20-python3-azure_20200130+git-2_all.deb ...
+Unpacking python3-azure (20200130+git-2) ...
+Selecting previously unselected package python3-argcomplete.
+Preparing to unpack .../21-python3-argcomplete_1.8.1-1.3ubuntu1_all.deb ...
+Unpacking python3-argcomplete (1.8.1-1.3ubuntu1) ...
+Selecting previously unselected package python3-applicationinsights.
+Preparing to unpack .../22-python3-applicationinsights_0.11.9-2_all.deb ...
+Unpacking python3-applicationinsights (0.11.9-2) ...
+Selecting previously unselected package python3-azure-cli-telemetry.
+Preparing to unpack .../23-python3-azure-cli-telemetry_2.0.81+ds-4ubuntu0.2_all.deb ...
+Unpacking python3-azure-cli-telemetry (2.0.81+ds-4ubuntu0.2) ...
+Selecting previously unselected package python3-humanfriendly.
+Preparing to unpack .../24-python3-humanfriendly_4.18-2_all.deb ...
+Unpacking python3-humanfriendly (4.18-2) ...
+Selecting previously unselected package python3-jmespath.
+Preparing to unpack .../25-python3-jmespath_0.9.4-2ubuntu1_all.deb ...
+Unpacking python3-jmespath (0.9.4-2ubuntu1) ...
+Selecting previously unselected package python3-pygments.
+Preparing to unpack .../26-python3-pygments_2.3.1+dfsg-1ubuntu2.2_all.deb ...
+Unpacking python3-pygments (2.3.1+dfsg-1ubuntu2.2) ...
+Selecting previously unselected package python3-tabulate.
+Preparing to unpack .../27-python3-tabulate_0.8.6-0ubuntu2_all.deb ...
+Unpacking python3-tabulate (0.8.6-0ubuntu2) ...
+Selecting previously unselected package python3-knack.
+Preparing to unpack .../28-python3-knack_0.6.3-2_all.deb ...
+Unpacking python3-knack (0.6.3-2) ...
+Selecting previously unselected package python3-bcrypt.
+Preparing to unpack .../29-python3-bcrypt_3.1.7-2ubuntu1_amd64.deb ...
+Unpacking python3-bcrypt (3.1.7-2ubuntu1) ...
+Selecting previously unselected package python3-paramiko.
+Preparing to unpack .../30-python3-paramiko_2.6.0-2ubuntu0.1_all.deb ...
+Unpacking python3-paramiko (2.6.0-2ubuntu0.1) ...
+Selecting previously unselected package python3-pkginfo.
+Preparing to unpack .../31-python3-pkginfo_1.4.2-3_all.deb ...
+Unpacking python3-pkginfo (1.4.2-3) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../32-python3-wheel_0.34.2-1_all.deb ...
+Unpacking python3-wheel (0.34.2-1) ...
+Selecting previously unselected package python3-azure-cli-core.
+Preparing to unpack .../33-python3-azure-cli-core_2.0.81+ds-4ubuntu0.2_all.deb ...
+Unpacking python3-azure-cli-core (2.0.81+ds-4ubuntu0.2) ...
+Selecting previously unselected package python3-azure-cosmos.
+Preparing to unpack .../34-python3-azure-cosmos_3.1.1-3_all.deb ...
+Unpacking python3-azure-cosmos (3.1.1-3) ...
+Selecting previously unselected package python3-azure-functions-devops-build.
+Preparing to unpack .../35-python3-azure-functions-devops-build_0.0.22-4_all.deb ...
+Unpacking python3-azure-functions-devops-build (0.0.22-4) ...
+Selecting previously unselected package python3-azure-multiapi-storage.
+Preparing to unpack .../36-python3-azure-multiapi-storage_0.2.4-3_all.deb ...
+Unpacking python3-azure-multiapi-storage (0.2.4-3) ...
+Selecting previously unselected package python3-invoke.
+Preparing to unpack .../37-python3-invoke_1.3.0+ds-0.1_all.deb ...
+Unpacking python3-invoke (1.3.0+ds-0.1) ...
+Selecting previously unselected package python3-fabric.
+Preparing to unpack .../38-python3-fabric_2.5.0-0.2_all.deb ...
+Unpacking python3-fabric (2.5.0-0.2) ...
+Selecting previously unselected package python3-javaproperties.
+Preparing to unpack .../39-python3-javaproperties_0.6.0-2_all.deb ...
+Unpacking python3-javaproperties (0.6.0-2) ...
+Selecting previously unselected package python3-jsmin.
+Preparing to unpack .../40-python3-jsmin_2.2.2-2_all.deb ...
+Unpacking python3-jsmin (2.2.2-2) ...
+Selecting previously unselected package python3-jsondiff.
+Preparing to unpack .../41-python3-jsondiff_1.1.1-4_all.deb ...
+Unpacking python3-jsondiff (1.1.1-4) ...
+Selecting previously unselected package python3-pbr.
+Preparing to unpack .../42-python3-pbr_5.4.5-0ubuntu1_all.deb ...
+Unpacking python3-pbr (5.4.5-0ubuntu1) ...
+Selecting previously unselected package python3-mock.
+Preparing to unpack .../43-python3-mock_3.0.5-1build1_all.deb ...
+Unpacking python3-mock (3.0.5-1build1) ...
+Selecting previously unselected package python3-psutil.
+Preparing to unpack .../44-python3-psutil_5.5.1-1ubuntu4_amd64.deb ...
+Unpacking python3-psutil (5.5.1-1ubuntu4) ...
+Selecting previously unselected package python3-scp.
+Preparing to unpack .../45-python3-scp_0.13.0-2_all.deb ...
+Unpacking python3-scp (0.13.0-2) ...
+Selecting previously unselected package python3-sshtunnel.
+Preparing to unpack .../46-python3-sshtunnel_0.1.4-2_all.deb ...
+Unpacking python3-sshtunnel (0.1.4-2) ...
+Selecting previously unselected package python3-tz.
+Preparing to unpack .../47-python3-tz_2019.3-1_all.deb ...
+Unpacking python3-tz (2019.3-1) ...
+Selecting previously unselected package python3-vsts-cd-manager.
+Preparing to unpack .../48-python3-vsts-cd-manager_1.0.2-2_all.deb ...
+Unpacking python3-vsts-cd-manager (1.0.2-2) ...
+Selecting previously unselected package python3-websocket.
+Preparing to unpack .../49-python3-websocket_0.53.0-2ubuntu1_all.deb ...
+Unpacking python3-websocket (0.53.0-2ubuntu1) ...
+Selecting previously unselected package python3-xmltodict.
+Preparing to unpack .../50-python3-xmltodict_0.12.0-1_all.deb ...
+Unpacking python3-xmltodict (0.12.0-1) ...
+Selecting previously unselected package python3-azure-cli.
+Preparing to unpack .../51-python3-azure-cli_2.0.81+ds-4ubuntu0.2_all.deb ...
+Unpacking python3-azure-cli (2.0.81+ds-4ubuntu0.2) ...
+Selecting previously unselected package azure-cli.
+Preparing to unpack .../52-azure-cli_2.0.81+ds-4ubuntu0.2_all.deb ...
+Unpacking azure-cli (2.0.81+ds-4ubuntu0.2) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../53-javascript-common_11_all.deb ...
+Unpacking javascript-common (11) ...
+Selecting previously unselected package libjs-jquery.
+Preparing to unpack .../54-libjs-jquery_3.3.1~dfsg-3_all.deb ...
+Unpacking libjs-jquery (3.3.1~dfsg-3) ...
+Selecting previously unselected package libjs-underscore.
+Preparing to unpack .../55-libjs-underscore_1.9.1~dfsg-1ubuntu0.20.04.1_all.deb ...
+Unpacking libjs-underscore (1.9.1~dfsg-1ubuntu0.20.04.1) ...
+Selecting previously unselected package libjs-sphinxdoc.
+Preparing to unpack .../56-libjs-sphinxdoc_1.8.5-7ubuntu3_all.deb ...
+Unpacking libjs-sphinxdoc (1.8.5-7ubuntu3) ...
+Selecting previously unselected package python-pkginfo-doc.
+Preparing to unpack .../57-python-pkginfo-doc_1.4.2-3_all.deb ...
+Unpacking python-pkginfo-doc (1.4.2-3) ...
+Selecting previously unselected package python3-azext-devops.
+Preparing to unpack .../58-python3-azext-devops_0.17.0-5_all.deb ...
+Unpacking python3-azext-devops (0.17.0-5) ...
+Setting up javascript-common (11) ...
+Setting up python3-pkginfo (1.4.2-3) ...
+Setting up python3-pbr (5.4.5-0ubuntu1) ...
+update-alternatives: using /usr/bin/python3-pbr to provide /usr/bin/pbr (pbr) in auto mode
+Setting up python3-bcrypt (3.1.7-2ubuntu1) ...
+Setting up python3-ply (3.11-3ubuntu0.1) ...
+Setting up python3-msal (1.1.0-3) ...
+Setting up python3-tabulate (0.8.6-0ubuntu2) ...
+Setting up python3-uamqp (1.2.6-4) ...
+Setting up python3-wheel (0.34.2-1) ...
+Setting up python3-psutil (5.5.1-1ubuntu4) ...
+Setting up python3-multidict (4.7.3-1build1) ...
+Setting up python3-applicationinsights (0.11.9-2) ...
+Setting up python3-tz (2019.3-1) ...
+Setting up python3-pycparser (2.19-1ubuntu1) ...
+Setting up python3-mock (3.0.5-1build1) ...
+Setting up python3-async-timeout (3.0.1-1) ...
+Setting up python3-isodate (0.6.0-2) ...
+Setting up python3-xmltodict (0.12.0-1) ...
+Setting up python3-pygments (2.3.1+dfsg-1ubuntu2.2) ...
+Setting up python3-humanfriendly (4.18-2) ...
+Setting up python3-jsmin (2.2.2-2) ...
+Setting up python3-azure-cosmos (3.1.1-3) ...
+/usr/lib/python3/dist-packages/azure/cosmos/session.py:186: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if session_token is not '':
+Setting up python3-jmespath (0.9.4-2ubuntu1) ...
+Setting up python3-portalocker (1.5.1-1) ...
+Setting up python3-javaproperties (0.6.0-2) ...
+Setting up python3-jsondiff (1.1.1-4) ...
+Setting up python3-dateutil (2.7.3-3ubuntu1) ...
+Setting up libjs-jquery (3.3.1~dfsg-3) ...
+Setting up python3-paramiko (2.6.0-2ubuntu0.1) ...
+Setting up python3-invoke (1.3.0+ds-0.1) ...
+Setting up python3-argcomplete (1.8.1-1.3ubuntu1) ...
+Setting up python3-yarl (1.4.2-2) ...
+Setting up python3-websocket (0.53.0-2ubuntu1) ...
+update-alternatives: using /usr/bin/python3-wsdump to provide /usr/bin/wsdump (wsdump) in auto mode
+Setting up python3-requests-oauthlib (1.0.0-1.1build1) ...
+Setting up libjs-underscore (1.9.1~dfsg-1ubuntu0.20.04.1) ...
+Setting up python3-azure-cli-telemetry (2.0.81+ds-4ubuntu0.2) ...
+Setting up python3-knack (0.6.3-2) ...
+Setting up python3-cffi (1.14.0-1build1) ...
+Setting up python3-aiohttp (3.6.2-1ubuntu1) ...
+Setting up python3-msal-extensions (0.1.3-2) ...
+Setting up python3-msrest (0.6.10-1) ...
+Setting up python3-sshtunnel (0.1.4-2) ...
+Setting up python3-fabric (2.5.0-0.2) ...
+Setting up python3-scp (0.13.0-2) ...
+Setting up libjs-sphinxdoc (1.8.5-7ubuntu3) ...
+Setting up python3-adal (1.2.2-1) ...
+Setting up python3-vsts-cd-manager (1.0.2-2) ...
+Setting up python3-msrestazure (0.6.2-1) ...
+Setting up python3-azure-datalake-store (0.0.48-3) ...
+Setting up python3-azure-functions-devops-build (0.0.22-4) ...
+Setting up python-pkginfo-doc (1.4.2-3) ...
+Setting up python3-azure (20200130+git-2) ...
+Setting up python3-azure-multiapi-storage (0.2.4-3) ...
+/usr/lib/python3/dist-packages/azure/multiapi/cosmosdb/v2017_04_17/common/_connection.py:91: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2015_04_05/_connection.py:79: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2015_04_05/blob/baseblobservice.py:922: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and\
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2015_04_05/blob/baseblobservice.py:2265: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and\
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2016_05_31/_connection.py:83: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2016_05_31/blob/_upload_chunking.py:369: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if n is 0 or self._buffer.closed:
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2016_05_31/blob/baseblobservice.py:975: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and\
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2016_05_31/blob/baseblobservice.py:2527: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and\
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_04_17/blob/_upload_chunking.py:391: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if n is 0 or self._buffer.closed:
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_04_17/blob/baseblobservice.py:977: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_04_17/blob/baseblobservice.py:2530: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_04_17/common/_connection.py:87: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_07_29/blob/_upload_chunking.py:392: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if n is 0 or self._buffer.closed:
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_07_29/blob/baseblobservice.py:996: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_07_29/blob/baseblobservice.py:2566: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_07_29/common/_connection.py:79: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_11_09/blob/_upload_chunking.py:392: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if n is 0 or self._buffer.closed:
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_11_09/blob/baseblobservice.py:1003: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_11_09/blob/baseblobservice.py:2573: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2017_11_09/common/_connection.py:81: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2018_03_28/blob/_upload_chunking.py:403: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if n is 0 or self._buffer.closed:
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2018_03_28/blob/baseblobservice.py:1008: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2018_03_28/blob/baseblobservice.py:2607: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2018_03_28/common/_connection.py:81: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2018_11_09/blob/_upload_chunking.py:403: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if n is 0 or self._buffer.closed:
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2018_11_09/blob/baseblobservice.py:1063: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2018_11_09/blob/baseblobservice.py:2719: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/multiapi/storage/v2018_11_09/common/_connection.py:82: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+Setting up python3-azure-cosmosdb-table (1.0.5+git20191025-5) ...
+Setting up python3-azure-storage (20181109+git-2) ...
+/usr/lib/python3/dist-packages/azure/storage/blob/_upload_chunking.py:403: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if n is 0 or self._buffer.closed:
+/usr/lib/python3/dist-packages/azure/storage/blob/baseblobservice.py:1008: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/storage/blob/baseblobservice.py:2607: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if lease_duration is not -1 and \
+/usr/lib/python3/dist-packages/azure/storage/common/_connection.py:82: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  self.protocol = self.protocol if parsed_url.scheme is '' else parsed_url.scheme
+Setting up python3-azure-cli-core (2.0.81+ds-4ubuntu0.2) ...
+Setting up python3-azure-cli (2.0.81+ds-4ubuntu0.2) ...
+Setting up azure-cli (2.0.81+ds-4ubuntu0.2) ...
+Setting up python3-azext-devops (0.17.0-5) ...
+Processing triggers for man-db (2.9.1-1) ...
+sweetapalsingh@hu-sweetapal:~$ az login
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code RP54Z3F45 to authenticate.
+[
+  {
+    "cloudName": "AzureCloud",
+    "id": "fcd4d0d9-59c4-451c-9665-a0001f80e9e2",
+    "isDefault": true,
+    "name": "US-AZSUB-AME-CON-HASHEDIN-AZURE-INTERNAL-POC-NPD",
+    "state": "Enabled",
+    "tenantId": "36da45f1-dd2c-4d1f-af13-5abe46b99921",
+    "user": {
+      "name": "usa-sweetasingh@deloitte.com",
+      "type": "user"
+    }
+  },
+  {
+    "cloudName": "AzureCloud",
+    "id": "0dc9fa44-bc2a-4ccf-b509-5d5d7060ccc2",
+    "isDefault": false,
+    "name": "US-AZSUB-AME-ITS-SHAREDIMAGEGALLERY-SYS",
+    "state": "Enabled",
+    "tenantId": "36da45f1-dd2c-4d1f-af13-5abe46b99921",
+    "user": {
+      "name": "usa-sweetasingh@deloitte.com",
+      "type": "user"
+    }
+  },
+  {
+    "cloudName": "AzureCloud",
+    "id": "bed39608-d94b-4c57-827a-551c9f2310b1",
+    "isDefault": false,
+    "name": "DTTL-AZSUB-ALL-PORT020-APP2006-GTI Cloud Operation-NPD",
+    "state": "Enabled",
+    "tenantId": "36da45f1-dd2c-4d1f-af13-5abe46b99921",
+    "user": {
+      "name": "usa-sweetasingh@deloitte.com",
+      "type": "user"
+    }
+  },
+  {
+    "cloudName": "AzureCloud",
+    "id": "6527dadb-64ba-42f1-9aa2-82d0743a1941",
+    "isDefault": false,
+    "name": "DTTL-AZSUB-ALL-PORT020-APP2006-GTI Cloud Operation-PRD",
+    "state": "Enabled",
+    "tenantId": "36da45f1-dd2c-4d1f-af13-5abe46b99921",
+    "user": {
+      "name": "usa-sweetasingh@deloitte.com",
+      "type": "user"
+    }
+  },
+  {
+    "cloudName": "AzureCloud",
+    "id": "ca81b93e-8145-4fc1-af5c-5bf6154817b4",
+    "isDefault": false,
+    "name": "UK-ITS-AZU-PRD-0000020",
+    "state": "Enabled",
+    "tenantId": "36da45f1-dd2c-4d1f-af13-5abe46b99921",
+    "user": {
+      "name": "usa-sweetasingh@deloitte.com",
+      "type": "user"
+    }
+  }
+]
+sweetapalsingh@hu-sweetapal:~$ az account show
+{
+  "environmentName": "AzureCloud",
+  "id": "fcd4d0d9-59c4-451c-9665-a0001f80e9e2",
+  "isDefault": true,
+  "name": "US-AZSUB-AME-CON-HASHEDIN-AZURE-INTERNAL-POC-NPD",
+  "state": "Enabled",
+  "tenantId": "36da45f1-dd2c-4d1f-af13-5abe46b99921",
+  "user": {
+    "name": "usa-sweetasingh@deloitte.com",
+    "type": "user"
+  }
+}
+sweetapalsingh@hu-sweetapal:~$ touch main.tf
+sweetapalsingh@hu-sweetapal:~$ touch sweetafile.txt
+sweetapalsingh@hu-sweetapal:~$ ls
+main.tf  sweetafile.txt
+sweetapalsingh@hu-sweetapal:~$ nano main.tf
+sweetapalsingh@hu-sweetapal:~$ sweetapalsingh@hu-sweetapal:~$ terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding latest version of hashicorp/azurerm...
+- Installing hashicorp/azurerm v3.11.0...
+- Installed hashicorp/azurerm v3.11.0 (signed by HashiCorp)
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+sweetapalsingh@hu-sweetapal:~$ nano main.tf
+sweetapalsingh@hu-sweetapal:~$ terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_storage_blob.hu-sdet-sweeta-blob will be created
+  + resource "azurerm_storage_blob" "hu-sdet-sweeta-blob" {
+      + access_tier            = (known after apply)
+      + content_type           = "application/octet-stream"
+      + id                     = (known after apply)
+      + metadata               = (known after apply)
+      + name                   = "sweetafile.txt"
+      + parallelism            = 8
+      + size                   = 0
+      + source                 = "sweetafile.txt"
+      + storage_account_name   = "terraformhusdet"
+      + storage_container_name = "hu-sdet-sweeta-container"
+      + type                   = "Block"
+      + url                    = (known after apply)
+    }
+
+  # azurerm_storage_container.hu-sdet-sweeta-container will be created
+  + resource "azurerm_storage_container" "hu-sdet-sweeta-container" {
+      + container_access_type   = "private"
+      + has_immutability_policy = (known after apply)
+      + has_legal_hold          = (known after apply)
+      + id                      = (known after apply)
+      + metadata                = (known after apply)
+      + name                    = "hu-sdet-sweeta-container"
+      + resource_manager_id     = (known after apply)
+      + storage_account_name    = "terraformhusdet"
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+sweetapalsingh@hu-sweetapal:~$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_storage_blob.hu-sdet-sweeta-blob will be created
+  + resource "azurerm_storage_blob" "hu-sdet-sweeta-blob" {
+      + access_tier            = (known after apply)
+      + content_type           = "application/octet-stream"
+      + id                     = (known after apply)
+      + metadata               = (known after apply)
+      + name                   = "sweetafile.txt"
+      + parallelism            = 8
+      + size                   = 0
+      + source                 = "sweetafile.txt"
+      + storage_account_name   = "terraformhusdet"
+      + storage_container_name = "hu-sdet-sweeta-container"
+      + type                   = "Block"
+      + url                    = (known after apply)
+    }
+
+  # azurerm_storage_container.hu-sdet-sweeta-container will be created
+  + resource "azurerm_storage_container" "hu-sdet-sweeta-container" {
+      + container_access_type   = "private"
+      + has_immutability_policy = (known after apply)
+      + has_legal_hold          = (known after apply)
+      + id                      = (known after apply)
+      + metadata                = (known after apply)
+      + name                    = "hu-sdet-sweeta-container"
+      + resource_manager_id     = (known after apply)
+      + storage_account_name    = "terraformhusdet"
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+azurerm_storage_container.hu-sdet-sweeta-container: Creating...
+azurerm_storage_container.hu-sdet-sweeta-container: Creation complete after 2s [id=https://terraformhusdet.blob.core.windows.net/hu-sdet-sweeta-container]
+azurerm_storage_blob.hu-sdet-sweeta-blob: Creating...
+╷
+│ Error: creating Blob "sweetafile.txt" (Container "hu-sdet-sweeta-container" / Account "terraformhusdet"): PutBlockBlobFromFile: Error putting bytes: blobs.Client#PutBlockBlob: Invalid input: `input.Content` must either be nil or not empty.
+│
+│   with azurerm_storage_blob.hu-sdet-sweeta-blob,
+│   on main.tf line 11, in resource "azurerm_storage_blob" "hu-sdet-

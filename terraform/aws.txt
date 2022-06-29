@@ -1,0 +1,500 @@
+Microsoft Windows [Version 10.0.19042.1706]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sweetasingh>cd Downloads
+
+C:\Users\sweetasingh\Downloads>ssh -i "husweetapal.pem" ubuntu@ec2-18-117-86-88.us-east-2.compute.amazonaws.com
+Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.15.0-1011-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jun 28 18:29:30 UTC 2022
+
+  System load:  0.0166015625      Processes:             107
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jun 28 18:29:30 UTC 2022
+
+  System load:  0.0166015625      Processes:             107
+  Usage of /:   37.4% of 7.58GB   Users logged in:       0
+  Memory usage: 33%               IPv4 address for eth0: 172.31.26.228
+  Swap usage:   0%
+
+
+23 updates can be applied immediately.
+9 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Tue Jun 28 18:06:26 2022 from 167.219.0.140
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-26-228:~$ ls
+ubuntu@ip-172-31-26-228:~$ sudo mv terraform /usr/local/bin
+mv: cannot stat 'terraform': No such file or directory
+ubuntu@ip-172-31-26-228:~$ - terraform --version
+-: command not found
+ubuntu@ip-172-31-26-228:~$ terraform --version
+terraform: command not found
+ubuntu@ip-172-31-26-228:~$ https://releases.hashicorp.com/terraform/1.2.3/terraform_1.2.3_linux_amd64.zip
+-bash: https://releases.hashicorp.com/terraform/1.2.3/terraform_1.2.3_linux_amd64.zip: No such file or directory
+ubuntu@ip-172-31-26-228:~$ wget https://releases.hashicorp.com/terraform/1.2.3/terraform_1.2.3_linux_amd64.zip
+--2022-06-28 18:49:55--  https://releases.hashicorp.com/terraform/1.2.3/terraform_1.2.3_linux_amd64.zip
+Resolving releases.hashicorp.com (releases.hashicorp.com)... 146.75.34.49
+Connecting to releases.hashicorp.com (releases.hashicorp.com)|146.75.34.49|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 19891436 (19M) [application/zip]
+Saving to: ‘terraform_1.2.3_linux_amd64.zip’
+
+terraform_1.2.3_linux_amd64.zip            100%[========================================================================================>]  18.97M  84.4MB/s    in 0.2s
+
+2022-06-28 18:49:55 (84.4 MB/s) - ‘terraform_1.2.3_linux_amd64.zip’ saved [19891436/19891436]
+
+ubuntu@ip-172-31-26-228:~$ unzip terraform_1.2.3_linux_amd64.zip
+Command 'unzip' not found, but can be installed with:
+sudo apt install unzip
+ubuntu@ip-172-31-26-228:~$ sudo apt install unzip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip
+0 upgraded, 1 newly installed, 0 to remove and 19 not upgraded.
+Need to get 174 kB of archives.
+After this operation, 385 kB of additional disk space will be used.
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 unzip amd64 6.0-26ubuntu3 [174 kB]
+Fetched 174 kB in 0s (8790 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 112400 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3) ...
+Setting up unzip (6.0-26ubuntu3) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-172-31-26-228:~$ sudo mv terraform /usr/local/bin
+mv: cannot stat 'terraform': No such file or directory
+ubuntu@ip-172-31-26-228:~$ unzip terraform_1.2.3_linux_amd64.zip
+Archive:  terraform_1.2.3_linux_amd64.zip
+  inflating: terraform
+ubuntu@ip-172-31-26-228:~$ sudo mv terraform /usr/local/bin
+ubuntu@ip-172-31-26-228:~$ terraform --version
+Terraform v1.2.3
+on linux_amd64
+ubuntu@ip-172-31-26-228:~$ ls
+terraform_1.2.3_linux_amd64.zip
+ubuntu@ip-172-31-26-228:~$ ls -tlr
+total 19428
+-rw-rw-r-- 1 ubuntu ubuntu 19891436 Jun 15 17:56 terraform_1.2.3_linux_amd64.zip
+ubuntu@ip-172-31-26-228:~$ ll
+total 19468
+drwxr-x--- 5 ubuntu ubuntu     4096 Jun 28 18:54 ./
+drwxr-xr-x 3 root   root       4096 Jun 28 16:57 ../
+-rw------- 1 ubuntu ubuntu        3 Jun 28 18:28 .bash_history
+-rw-r--r-- 1 ubuntu ubuntu      220 Jan  6 16:23 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu     3771 Jan  6 16:23 .bashrc
+drwx------ 2 ubuntu ubuntu     4096 Jun 28 18:06 .cache/
+-rw-r--r-- 1 ubuntu ubuntu      807 Jan  6 16:23 .profile
+drwx------ 2 ubuntu ubuntu     4096 Jun 28 16:57 .ssh/
+-rw-r--r-- 1 ubuntu ubuntu        0 Jun 28 18:46 .sudo_as_admin_successful
+drwxr-xr-x 2 ubuntu ubuntu     4096 Jun 28 18:54 .terraform.d/
+-rw-rw-r-- 1 ubuntu ubuntu      177 Jun 28 18:49 .wget-hsts
+-rw-rw-r-- 1 ubuntu ubuntu 19891436 Jun 15 17:56 terraform_1.2.3_linux_amd64.zip
+ubuntu@ip-172-31-26-228:~$ touch main.mt
+ubuntu@ip-172-31-26-228:~$ ls
+main.mt  terraform_1.2.3_linux_amd64.zip
+ubuntu@ip-172-31-26-228:~$ touch variable.tf
+ubuntu@ip-172-31-26-228:~$ touch provider.tf
+ubuntu@ip-172-31-26-228:~$ touch ec-2-prod.tf
+ubuntu@ip-172-31-26-228:~$ nginx.sh
+nginx.sh: command not found
+ubuntu@ip-172-31-26-228:~$ touch nginx.sh
+ubuntu@ip-172-31-26-228:~$ ls
+ec-2-prod.tf  main.mt  nginx.sh  provider.tf  terraform_1.2.3_linux_amd64.zip  variable.tf
+ubuntu@ip-172-31-26-228:~$ touch terraform.tfstate.backup
+ubuntu@ip-172-31-26-228:~$ touch teraform.tfvars
+ubuntu@ip-172-31-26-228:~$ ls -tlr
+total 19428
+-rw-rw-r-- 1 ubuntu ubuntu 19891436 Jun 15 17:56 terraform_1.2.3_linux_amd64.zip
+-rw-rw-r-- 1 ubuntu ubuntu        0 Jun 28 19:36 main.mt
+-rw-rw-r-- 1 ubuntu ubuntu        0 Jun 28 19:41 variable.tf
+-rw-rw-r-- 1 ubuntu ubuntu        0 Jun 28 19:41 provider.tf
+-rw-rw-r-- 1 ubuntu ubuntu        0 Jun 28 19:43 ec-2-prod.tf
+-rw-rw-r-- 1 ubuntu ubuntu        0 Jun 28 19:43 nginx.sh
+-rw-rw-r-- 1 ubuntu ubuntu        0 Jun 28 19:46 terraform.tfstate.backup
+-rw-rw-r-- 1 ubuntu ubuntu        0 Jun 28 19:47 teraform.tfvars
+ubuntu@ip-172-31-26-228:~$ nano nginx.sh
+ubuntu@ip-172-31-26-228:~$ nano provider.tf
+ubuntu@ip-172-31-26-228:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): /home/ubuntu/aws-tera/file.pub
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Saving key "/home/ubuntu/aws-tera/file.pub" failed: No such file or directory
+ubuntu@ip-172-31-26-228:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:RkvI1M5RNtORyXfvr56GrD/WINfvyuqp1x0+iUSs2sU ubuntu@ip-172-31-26-228
+The key's randomart image is:
++---[RSA 3072]----+
+|      .. .=o.+   |
+|     o .o. o= . .|
+|      ooo.  .. ..|
+|       oo.   o  .|
+|        S   +. . |
+|       .  ..oE...|
+|          o+o=oo+|
+|         . .*++=+|
+|          oB==*+o|
++----[SHA256]-----+
+ubuntu@ip-172-31-26-228:~$ ls
+ec-2-prod.tf  main.mt  nginx.sh  provider.tf  teraform.tfvars  terraform.tfstate.backup  terraform_1.2.3_linux_amd64.zip  variable.tf
+ubuntu@ip-172-31-26-228:~$ touch file.pub
+ubuntu@ip-172-31-26-228:~$ nano provider.tf
+ubuntu@ip-172-31-26-228:~$ nano nginx.sh
+ubuntu@ip-172-31-26-228:~$ nano provider.tf
+ubuntu@ip-172-31-26-228:~$ terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding latest version of hashicorp/aws...
+- Installing hashicorp/aws v4.20.1...
+- Installed hashicorp/aws v4.20.1 (signed by HashiCorp)
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+ubuntu@ip-172-31-26-228:~$ terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.aws-nginx-instance will be created
+  + resource "aws_instance" "aws-nginx-instance" {
+      + ami                                  = "ami-02f3416038bdb17fb"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Name" = "hu-tera-sweetapal"
+        }
+      + tags_all                             = {
+          + "Name" = "hu-tera-sweetapal"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = "9562a3143faafa31140b22f378e5e5bc29ae948e"
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_key_pair.aws-key will be created
+  + resource "aws_key_pair" "aws-key" {
+      + arn             = (known after apply)
+      + fingerprint     = (known after apply)
+      + id              = (known after apply)
+      + key_name        = "aws-key-sweeta"
+      + key_name_prefix = (known after apply)
+      + key_pair_id     = (known after apply)
+      + public_key      = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCZ2FicC9UuYJKwKFl6kErVZ4GSsJKA6SYgfoyEHa2X27prQj3MUwOAVWjE8sGQogiSig5rFl9ggpUPFEciQKoA56iu3Ah3cgDnfY+9CQqrkrKCP97sgzUf7bSDyO9//FPEbJiQvxOOU9b/XvTcyCpyKIV8TIRSiLWacADDeX+nt947hUKlS0q9Eh1YAAFDaADuBp0zcQHPUIbQ+3nTt8Mjle/ebZnTIALtTYNEe1EDPUNxoVJm4SOTyQIr4+vZlT6oyeA2PUC8nV6bmRifdfm//Qv8LOw+BUsEr1Kvu0rrMiFgga15kMEV7VK3wOu40K3NCSgsLsu80ubCP/hGAyM/lSaswitpx5BHiQKyGI8+UWNkAXkd+k/QQ19ye5INuBsMh77ieGtr19gdVI4ZQIrf6cQlzYpjCpQLPi6lFhmQQW72Jgui7q4qe6408Dk6GUj7H0/uAniEMZw6SaQNcH+rqeLu5D3LZfBAPsCQ6MbFurOtlQrkZ47ZwzqeABUDcns= ubuntu@ip-172-31-26-228"
+      + tags_all        = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+ubuntu@ip-172-31-26-228:~$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.aws-nginx-instance will be created
+  + resource "aws_instance" "aws-nginx-instance" {
+      + ami                                  = "ami-02f3416038bdb17fb"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Name" = "hu-tera-sweetapal"
+        }
+      + tags_all                             = {
+          + "Name" = "hu-tera-sweetapal"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = "9562a3143faafa31140b22f378e5e5bc29ae948e"
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id                 = (known after apply)
+              + capacity_reservation_resource_group_arn = (known after apply)
+            }
+        }
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + maintenance_options {
+          + auto_recovery = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_card_index    = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + private_dns_name_options {
+          + enable_resource_name_dns_a_record    = (known after apply)
+          + enable_resource_name_dns_aaaa_record = (known after apply)
+          + hostname_type                        = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_key_pair.aws-key will be created
+  + resource "aws_key_pair" "aws-key" {
+      + arn             = (known after apply)
+      + fingerprint     = (known after apply)
+      + id              = (known after apply)
+      + key_name        = "aws-key-sweeta"
+      + key_name_prefix = (known after apply)
+      + key_pair_id     = (known after apply)
+      + public_key      = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCZ2FicC9UuYJKwKFl6kErVZ4GSsJKA6SYgfoyEHa2X27prQj3MUwOAVWjE8sGQogiSig5rFl9ggpUPFEciQKoA56iu3Ah3cgDnfY+9CQqrkrKCP97sgzUf7bSDyO9//FPEbJiQvxOOU9b/XvTcyCpyKIV8TIRSiLWacADDeX+nt947hUKlS0q9Eh1YAAFDaADuBp0zcQHPUIbQ+3nTt8Mjle/ebZnTIALtTYNEe1EDPUNxoVJm4SOTyQIr4+vZlT6oyeA2PUC8nV6bmRifdfm//Qv8LOw+BUsEr1Kvu0rrMiFgga15kMEV7VK3wOu40K3NCSgsLsu80ubCP/hGAyM/lSaswitpx5BHiQKyGI8+UWNkAXkd+k/QQ19ye5INuBsMh77ieGtr19gdVI4ZQIrf6cQlzYpjCpQLPi6lFhmQQW72Jgui7q4qe6408Dk6GUj7H0/uAniEMZw6SaQNcH+rqeLu5D3LZfBAPsCQ6MbFurOtlQrkZ47ZwzqeABUDcns= ubuntu@ip-172-31-26-228"
+      + tags_all        = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_key_pair.aws-key: Creating...
+aws_key_pair.aws-key: Creation complete after 0s [id=aws-key-sweeta]
+aws_instance.aws-nginx-instance: Creating...
+aws_instance.aws-nginx-instance: Still creating... [10s elapsed]
+aws_instance.aws-nginx-instance: Still creating... [20s elapsed]
+aws_instance.aws-nginx-instance: Still creating... [30s elapsed]
+aws_instance.aws-nginx-instance: Creation complete after 32s [id=i-0d862ab0e468b4d67]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+ubuntu@ip-172-31-26-228:~$ client_loop: send disconnect: Connection reset
+
+C:\Users\sweetasingh\Downloads>
+
+C:\Users\sweetasingh\Downloads>
